@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Dev Assignment #1</title>
+    <title>Blood Sugar Calculator by Ray Bednara</title>
   </head>
-
   <body>
-    <form action="#">
-
-      <!-- Developer's Note: It is NOT best accessibility practice to use 'placeholder' in place of <label>. -->
-      <input type="text" placeholder="First Name">
-      <input type="text" placeholder="Last Name">
-      <input type="submit" value="Add Student">
+    <!--
+      html form for entering and submitting current bs level with comments
+    -->
+    <form>
+      <label for="blood-sugar-level"> Enter blood sugar in mg/dl> </label>
+      <input type="text" id="blood-sugar-level" />
+      <label for="comments">Comments:</label>
+      <input type="text" id="comments" /> <input type="submit" value="Submit" />
     </form>
     <script src="scripts.js"></script>
   </body>
-
 </html>
