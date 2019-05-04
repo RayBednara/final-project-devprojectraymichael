@@ -6,7 +6,10 @@
  * 5. Iterate over said 'Array', passing each of the names as arguments into console.log().
  */
 
-//code from midterm project
+// code from midterm project
+
+// Initializing an array (reduce() and map() functions only relate to arrays)
+const bloodSugarInfo = [];
 
 document.querySelector("form").addEventListener("submit", ev => {
   // capture info entered into form
@@ -17,4 +20,14 @@ document.querySelector("form").addEventListener("submit", ev => {
   // Write data to an Object
   const bsData = { sugarLevel: bsLevel, comments: comment };
   console.log(bsData);
+
+  bloodSugarInfo.push(bsData);
+
+  function bloodSugarAverage = (arr) => {
+    return arr.reduce((total, curr) => total += curr) / arr.length
+  }
+  // To be honest, I'm not 100% certain this works, so this may need to be
+  // checked out in some sort of capacity, considering we're dealing with a
+  // function meant to take an average of blood sugar applicants.
+  console.log(bloodSugarAverage);
 });
