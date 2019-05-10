@@ -24,7 +24,6 @@ BloodSugarMgr.prototype.getAvg = function() {
     return readingsTotal + reading.reading;
   }, 0);
   return total / this.readings.length;
-  // it wasn't logging anything
 };
 
 const bsm = new BloodSugarMgr();
