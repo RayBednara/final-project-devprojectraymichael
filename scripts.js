@@ -30,21 +30,19 @@ document.querySelector("form").addEventListener("submit", ev => {
   const bsLevel = document.querySelector("#blood-sugar-level").value;
   const comment = document.querySelector("#comments").value;
   // push data into array
-  bloodSugarInfo.push(new UserBloodSugar(bsLevel, comment));
+  bloodSugarInfo.push(new UserBloodSugar((bsLevel, comment)));
 
-  console.log(bloodSugarInfo);
+  //console.log(bloodSugarInfo);
 
-  // bloodSugarInfo.push(bsData);
-  // bsAvgArr.push(bsData.sugarLevel);
+  // the accumulator is concatinating strings instead of treating the data as a number
 
-  /* I think for this function to work we would need to pass the data from our objects inside
-   * the array of numbers that we collected from our form. then we would count the objects inside  * *the array to build the average blood sugars.
-   */
-  const bloodSugarAverage = arr => {
-    return arr.reduce((total, curr) => (total += curr)) / arr.length;
-  };
-  // To be honest, I'm not 100% certain this works, so this may need to be
-  // checked out in some sort of capacity, considering we're dealing with a
-  // function meant to take an average of blood sugar applicants.
-  //console.log(bloodSugarAverage);
+  // map the array of data collected to pull out our bslevel data
+  let bsResults = bloodSugarInfo.map.Number(bsdata => bsdata.bsLevel);
+  // reduce the total bs data into one collection of numbers
+  const bloodSugarTotal = bsResults.reduce((total, curr) => (total += curr));
+  // average our collection into a usable number
+  const bloodSugarAverage = bloodSugarTotal / bsResults.length;
+  console.log(bloodSugarTotal);
+  console.log(bsResults.length);
+  console.log(bloodSugarAverage);
 });
