@@ -11,17 +11,31 @@
 // Initializing an array (reduce() and map() functions only relate to arrays)
 const bloodSugarInfo = [];
 
+// Initializing an array purely to retrieve averages of all applicants.
+const bsAvgArr = [];
+
+function bloodSugarAverage(arr) {
+  const sum = arr.reduce((total, curr) => total + curr);
+  return sum / arr.length;
+}
+// constructor for bloodsugar data
+function UserBloodSugar(bsLevel, comment) {
+  this.bsLevel = bsLevel;
+  this.comment = comment;
+}
+
 document.querySelector("form").addEventListener("submit", ev => {
   // capture info entered into form
   ev.preventDefault();
   const bsLevel = document.querySelector("#blood-sugar-level").value;
   const comment = document.querySelector("#comments").value;
+  // push data into array
+  bloodSugarInfo.push(new UserBloodSugar(bsLevel, comment));
 
-  // Write data to an Object
-  const bsData = { sugarLevel: bsLevel, comments: comment };
-  console.log(bsData);
+  console.log(bloodSugarInfo);
 
-  bloodSugarInfo.push(bsData);
+  // bloodSugarInfo.push(bsData);
+  // bsAvgArr.push(bsData.sugarLevel);
 
   /* I think for this function to work we would need to pass the data from our objects inside
    * the array of numbers that we collected from our form. then we would count the objects inside  * *the array to build the average blood sugars.
@@ -32,5 +46,5 @@ document.querySelector("form").addEventListener("submit", ev => {
   // To be honest, I'm not 100% certain this works, so this may need to be
   // checked out in some sort of capacity, considering we're dealing with a
   // function meant to take an average of blood sugar applicants.
-  console.log(bloodSugarAverage);
+  //console.log(bloodSugarAverage);
 });
