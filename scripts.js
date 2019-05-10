@@ -23,9 +23,12 @@ document.querySelector("form").addEventListener("submit", ev => {
 
   bloodSugarInfo.push(bsData);
 
-  function bloodSugarAverage = (arr) => {
-    return arr.reduce((total, curr) => total += curr) / arr.length
-  }
+  /* I think for this function to work we would need to pass the data from our objects inside
+   * the array of numbers that we collected from our form. then we would count the objects inside  * *the array to build the average blood sugars.
+   */
+  const bloodSugarAverage = arr => {
+    return arr.reduce((total, curr) => (total += curr)) / arr.length;
+  };
   // To be honest, I'm not 100% certain this works, so this may need to be
   // checked out in some sort of capacity, considering we're dealing with a
   // function meant to take an average of blood sugar applicants.
