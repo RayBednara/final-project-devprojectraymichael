@@ -14,9 +14,17 @@ function BloodSugarMgr() {
 // comments are optional
 BloodSugarMgr.prototype.addReading = function(reading, comment) {
   this.readings.push({
-    reading: reading,
+    reading: Number(reading),
     comment: comment
   });
+};
+
+BloodSugarMgr.prototype.getAvg = function() {
+  const total = this.readings.reduce((readingsTotal, reading) => {
+    return readingsTotal + reading.reading;
+  }, 0);
+  return total / this.readings.length;
+  // it wasn't logging anything
 };
 
 const bsm = new BloodSugarMgr();
@@ -39,4 +47,9 @@ document.querySelector("form").addEventListener("submit", ev => {
   // const bloodSugarTotal = bsResults.reduce((total, curr) => (total += curr));
 
   // const bloodSugarAverage = bloodSugarTotal / bsResults.length;
+});
+
+document.querySelector("button").addEventListener("click", () => {
+  bsm.getAvg();
+  console.log(bsm.getAvg());
 });
