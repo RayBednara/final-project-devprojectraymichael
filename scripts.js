@@ -22,7 +22,6 @@ BloodSugarMgr.prototype.addReading = function(reading, comment) {
 BloodSugarMgr.prototype.getAvg = function() {
   const total = this.readings.reduce((readingsTotal, reading) => readingsTotal + reading.reading, 0);
   return total / this.readings.length;
-  // it wasn't logging anything
 };
 
 const bsm = new BloodSugarMgr();
@@ -35,16 +34,6 @@ document.querySelector("form").addEventListener("submit", ev => {
   const comment = document.querySelector("#comments").value;
 
   bsm.addReading(bsLevel, comment);
-
-  // // push data into array
-  // bloodSugarReadings.push(new UserBloodSugar((bsLevel, comment)));
-
-  // // map the array of data collected to pull out our bslevel data
-  // let bsResults = bloodSugarInfo.map(bsdata => bsdata.bsLevel);
-  // Number(bsResults);
-  // const bloodSugarTotal = bsResults.reduce((total, curr) => (total += curr));
-
-  // const bloodSugarAverage = bloodSugarTotal / bsResults.length;
 });
 
 document.querySelector("button").addEventListener("click", () => {
