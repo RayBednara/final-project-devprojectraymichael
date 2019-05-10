@@ -37,12 +37,15 @@ document.querySelector("form").addEventListener("submit", ev => {
   // the accumulator is concatinating strings instead of treating the data as a number
 
   // map the array of data collected to pull out our bslevel data
-  let bsResults = bloodSugarInfo.map.Number(bsdata => bsdata.bsLevel);
+  let bsResults = bloodSugarInfo.map(bsdata => bsdata.bsLevel);
+  Number(bsResults);
   // reduce the total bs data into one collection of numbers
   const bloodSugarTotal = bsResults.reduce((total, curr) => (total += curr));
+  console.log(typeof(bloodSugarTotal))
   // average our collection into a usable number
+
   const bloodSugarAverage = bloodSugarTotal / bsResults.length;
-  console.log(bloodSugarTotal);
-  console.log(bsResults.length);
-  console.log(bloodSugarAverage);
+  // console.log(bloodSugarTotal);
+  // console.log(bsResults.length);
+  // console.log(bloodSugarAverage);
 });
