@@ -11,6 +11,11 @@
 // Initializing an array (reduce() and map() functions only relate to arrays)
 const bloodSugarInfo = [];
 
+function bloodSugarAverage(arr) {
+  const sum = arr.reduce((total, curr) => total + curr);
+  return sum / arr.length;
+}
+
 document.querySelector("form").addEventListener("submit", ev => {
   // capture info entered into form
   ev.preventDefault();
@@ -23,9 +28,6 @@ document.querySelector("form").addEventListener("submit", ev => {
 
   bloodSugarInfo.push(bsData);
 
-  function bloodSugarAverage = (arr) => {
-    return arr.reduce((total, curr) => total += curr) / arr.length
-  }
   // To be honest, I'm not 100% certain this works, so this may need to be
   // checked out in some sort of capacity, considering we're dealing with a
   // function meant to take an average of blood sugar applicants.
