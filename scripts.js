@@ -15,14 +15,12 @@ function BloodSugarMgr() {
 BloodSugarMgr.prototype.addReading = function(reading, comment) {
   this.readings.push({
     reading: Number(reading),
-    comment: comment
+    comment
   });
 };
 
 BloodSugarMgr.prototype.getAvg = function() {
-  const total = this.readings.reduce((readingsTotal, reading) => {
-    return readingsTotal + reading.reading;
-  }, 0);
+  const total = this.readings.reduce((readingsTotal, reading) => readingsTotal + reading.reading, 0);
   return total / this.readings.length;
   // it wasn't logging anything
 };
