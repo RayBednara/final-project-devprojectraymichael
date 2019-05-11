@@ -1,10 +1,16 @@
-td,
-th {
-  text-align: center;
+table {
+  margin: auto;
+  border: 5px solid #000000;
+  width: 600px;
+  border-spacing: 0;
 }
-table,
-td,
-th {
-  border: 1px solid black;
-  border-collapse: collapse;
+td, th {
+  padding: 0.5em;
+  font-family:  Verdana, sans-serif;
+}
+tr:first-of-type {
+  background-color: #eaeaea
+}
+tr:nth-of-type(even) {
+  background-color: #eaeaea
 }
