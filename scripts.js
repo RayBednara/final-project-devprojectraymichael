@@ -20,7 +20,10 @@ BloodSugarMgr.prototype.addReading = function(reading, comment) {
 };
 
 BloodSugarMgr.prototype.getAvg = function() {
-  const total = this.readings.reduce((readingsTotal, reading) => readingsTotal + reading.reading, 0);
+  const total = this.readings.reduce(
+    (readingsTotal, reading) => readingsTotal + reading.reading,
+    0
+  );
   return total / this.readings.length;
 };
 
