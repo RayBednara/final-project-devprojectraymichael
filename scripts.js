@@ -1,15 +1,9 @@
-// Initializing an array (reduce() and map() functions only relate to arrays)
-// const bloodSugarReadings = [];
-
-// function bloodSugarAverage(arr) {
-//   const sum = arr.reduce((total, curr) => total + curr);
-//   return sum / arr.length;
-// }
-
 // constructor for bloodsugar data
 function BloodSugarMgr() {
   this.readings = [];
 }
+
+function bsRender() {}
 
 // comments are optional
 BloodSugarMgr.prototype.addReading = function(reading, comment) {
