@@ -1,9 +1,14 @@
+const para = document.querySelector("p");
 // constructor for bloodsugar data
 function BloodSugarMgr() {
   this.readings = [];
 }
 
-function bsRender() {}
+function bsRender(str) {
+  para.classList.remove("is-hidden");
+
+  para.textContent = str;
+}
 
 // comments are optional
 BloodSugarMgr.prototype.addReading = function(reading, comment) {
@@ -35,5 +40,7 @@ document.querySelector("form").addEventListener("submit", ev => {
 
 document.querySelector("button").addEventListener("click", () => {
   bsm.getAvg();
-  console.log(bsm.getAvg());
+  bsRender(`Average blood sugar is: ${bsm.getAvg()}`);
 });
+
+console.log(bsm.getAvg());
