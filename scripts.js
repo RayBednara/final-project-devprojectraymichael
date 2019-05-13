@@ -28,6 +28,16 @@ BloodSugarMgr.prototype.getAvg = function() {
 
 const bsm = new BloodSugarMgr();
 
+function createTR() {
+  var template = document.querySelector("#bsdata");
+  var td = document.querySelectorAll("td");
+  let i = 0;
+
+  td[i].textContent = document.querySelector("#blood-sugar-level").value;
+  td[i + 1].textContent = document.querySelector("#comments").value;
+  i++;
+}
+
 document.querySelector("form").addEventListener("submit", ev => {
   // capture info entered into form
   ev.preventDefault();
@@ -36,6 +46,7 @@ document.querySelector("form").addEventListener("submit", ev => {
   const comment = document.querySelector("#comments").value;
 
   bsm.addReading(bsLevel, comment);
+  createTR();
 });
 
 document.querySelector("button").addEventListener("click", () => {
