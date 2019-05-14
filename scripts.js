@@ -5,8 +5,6 @@ function BloodSugarMgr() {
 }
 
 function bsRender(str) {
-  para.classList.remove("is-hidden");
-
   para.textContent = str;
 }
 
@@ -50,8 +48,13 @@ document.querySelector("form").addEventListener("submit", ev => {
 });
 
 document.querySelector("button").addEventListener("click", () => {
-  bsm.getAvg();
-  bsRender(`Average blood sugar is: ${bsm.getAvg()}`);
+  const averageString = `Average blood sugar is: ${bsm.getAvg()}`;
+  bsRender(averageString);
+  if (bsm.getAvg() >= 70 && bsm.getAvg() <= 180) {
+    para.classList.replace("#colorText", "#greenText");
+  } else if (bsm.getAvg() == 0) {
+    para.textContent = "Blood sugar has to be greater than 0.";
+  } else {
+    para.classList.replace("#colorText", "#redText");
+  }
 });
-
-console.log(bsm.getAvg());
