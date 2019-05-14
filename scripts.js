@@ -27,8 +27,8 @@ BloodSugarMgr.prototype.getAvg = function() {
 const bsm = new BloodSugarMgr();
 
 function createTR() {
-  var template = document.querySelector("#bsdata");
-  var td = document.querySelectorAll("td");
+  const template = document.querySelector("#bsdata");
+  const td = document.querySelectorAll("td");
   for (let i = 0; i < bsm.readings.length; i++)
     if ((i = 0)) {
       td[i].textContent = document.querySelector("#blood-sugar-level").value;
@@ -63,7 +63,7 @@ document.querySelector("form").addEventListener("submit", ev => {
 });
 
 document.querySelector("button").addEventListener("click", () => {
-  const averageString = `Average blood sugar is: ${bsm.getAvg()}`;
+  const averageString = `The average blood sugar of all applicants is ${bsm.getAvg()} mg/dl.`;
   bsRender(averageString);
   if (bsm.getAvg() >= 70 && bsm.getAvg() <= 180) {
     para.classList.replace("colorText", "greenText");
