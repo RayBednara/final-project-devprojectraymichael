@@ -29,11 +29,26 @@ const bsm = new BloodSugarMgr();
 function createTR() {
   var template = document.querySelector("#bsdata");
   var td = document.querySelectorAll("td");
-  let i = 0;
-  for (i; i < bsm.readings.length; i++) {
-    td[i].textContent = document.querySelector("#blood-sugar-level").value;
-    td[i + 1].textContent = document.querySelector("#comments").value;
-  }
+  for (let i = 0; i < bsm.readings.length; i++)
+    if ((i = 0)) {
+      td[i].textContent = document.querySelector("#blood-sugar-level").value;
+      td[i + 1].textContent = document.querySelector("#comments").value;
+    } else if ((i = 2)) {
+      td[i].textContent = document.querySelector("#blood-sugar-level").value;
+      td[i + 1].textContent = document.querySelector("#comments").value;
+    } else if ((i = 4)) {
+      td[i].textContent = document.querySelector("#blood-sugar-level").value;
+      td[i + 1].textContent = document.querySelector("#comments").value;
+    } else if ((i = 6)) {
+      td[i].textContent = document.querySelector("#blood-sugar-level").value;
+      td[i + 1].textContent = document.querySelector("#comments").value;
+    } else if ((i = 8)) {
+      td[i].textContent = document.querySelector("#blood-sugar-level").value;
+      td[i + 1].textContent = document.querySelector("#comments").value;
+    } else if ((i = 10)) {
+      td[i].textContent = document.querySelector("#blood-sugar-level").value;
+      td[i + 1].textContent = document.querySelector("#comments").value;
+    }
 }
 
 document.querySelector("form").addEventListener("submit", ev => {
