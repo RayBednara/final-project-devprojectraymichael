@@ -4,13 +4,23 @@ table {
   width: 600px;
   border-spacing: 0;
 }
-td, th {
+td,
+th {
   padding: 0.5em;
-  font-family:  Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
 }
 tr:first-of-type {
-  background-color: #eaeaea
+  background-color: #eaeaea;
 }
 tr:nth-of-type(even) {
-  background-color: #eaeaea
+  background-color: #eaeaea;
+}
+#greenText {
+  color: green;
+}
+#redText {
+  color: red;
+}
+#colorText {
+  color: black;
 }
