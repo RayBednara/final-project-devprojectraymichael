@@ -9,6 +9,10 @@ th {
   padding: 0.5em;
   font-family: Verdana, sans-serif;
 }
+p {
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}
 tr:first-of-type {
   background-color: #eaeaea;
 }
