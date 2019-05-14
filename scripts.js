@@ -75,4 +75,4 @@ document.querySelector("button").addEventListener("click", () => {
     console.log(para.outerHTML);
   }
 });
-console.log(para.outerHTML);
+
