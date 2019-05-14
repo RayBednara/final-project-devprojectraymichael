@@ -32,10 +32,10 @@ function createTR() {
   var template = document.querySelector("#bsdata");
   var td = document.querySelectorAll("td");
   let i = 0;
-
-  td[i].textContent = document.querySelector("#blood-sugar-level").value;
-  td[i + 1].textContent = document.querySelector("#comments").value;
-  i++;
+  for (i; i < bsm.readings.length; i++) {
+    td[i].textContent = document.querySelector("#blood-sugar-level").value;
+    td[i + 1].textContent = document.querySelector("#comments").value;
+  }
 }
 
 document.querySelector("form").addEventListener("submit", ev => {
