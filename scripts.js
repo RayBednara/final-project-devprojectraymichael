@@ -71,7 +71,7 @@ document.querySelector("button").addEventListener("click", () => {
   } else if (bsm.getAvg() == 0) {
     para.textContent = "Blood sugar has to be greater than 0.";
   } else {
-    para.classList.replace("#colorText", "#redText");
+    para.classList.replace("colorText", "redText");
     console.log(para.outerHTML);
   }
 });
