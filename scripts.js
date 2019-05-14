@@ -51,10 +51,13 @@ document.querySelector("button").addEventListener("click", () => {
   const averageString = `Average blood sugar is: ${bsm.getAvg()}`;
   bsRender(averageString);
   if (bsm.getAvg() >= 70 && bsm.getAvg() <= 180) {
-    para.classList.replace("#colorText", "#greenText");
+    para.classList.replace("colorText", "greenText");
+    console.log(para.outerHTML);
   } else if (bsm.getAvg() == 0) {
     para.textContent = "Blood sugar has to be greater than 0.";
   } else {
     para.classList.replace("#colorText", "#redText");
+    console.log(para.outerHTML);
   }
 });
+console.log(para.outerHTML);
