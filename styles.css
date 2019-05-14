@@ -15,12 +15,12 @@ tr:first-of-type {
 tr:nth-of-type(even) {
   background-color: #eaeaea;
 }
-#greenText {
+.greenText {
   color: green;
 }
-#redText {
+.redText {
   color: red;
 }
-#colorText {
+.colorText {
   color: black;
 }
