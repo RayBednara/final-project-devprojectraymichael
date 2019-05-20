@@ -27,25 +27,25 @@ BloodSugarMgr.prototype.getAvg = function() {
 const bsm = new BloodSugarMgr();
 
 function createTR() {
-  const template = document.querySelector("#bsdata");
+  // const template = document.querySelector("#bsdata");
   const td = document.querySelectorAll("td");
   for (let i = 0; i < bsm.readings.length; i++)
-    if ((i = 0)) {
+    if (i === 0) {
       td[i].textContent = document.querySelector("#blood-sugar-level").value;
       td[i + 1].textContent = document.querySelector("#comments").value;
-    } else if ((i = 2)) {
+    } else if (i === 2) {
       td[i].textContent = document.querySelector("#blood-sugar-level").value;
       td[i + 1].textContent = document.querySelector("#comments").value;
-    } else if ((i = 4)) {
+    } else if (i === 4) {
       td[i].textContent = document.querySelector("#blood-sugar-level").value;
       td[i + 1].textContent = document.querySelector("#comments").value;
-    } else if ((i = 6)) {
+    } else if (i === 6) {
       td[i].textContent = document.querySelector("#blood-sugar-level").value;
       td[i + 1].textContent = document.querySelector("#comments").value;
-    } else if ((i = 8)) {
+    } else if (i === 8) {
       td[i].textContent = document.querySelector("#blood-sugar-level").value;
       td[i + 1].textContent = document.querySelector("#comments").value;
-    } else if ((i = 10)) {
+    } else if (i === 10) {
       td[i].textContent = document.querySelector("#blood-sugar-level").value;
       td[i + 1].textContent = document.querySelector("#comments").value;
     }
@@ -67,12 +67,9 @@ document.querySelector("button").addEventListener("click", () => {
   bsRender(averageString);
   if (bsm.getAvg() >= 70 && bsm.getAvg() <= 180) {
     para.classList.replace("colorText", "greenText");
-    
   } else if (bsm.getAvg() == 0) {
     para.textContent = "Blood sugar has to be greater than 0.";
   } else {
     para.classList.replace("colorText", "redText");
-    
   }
 });
-
