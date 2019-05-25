@@ -26,6 +26,8 @@ BloodSugarMgr.prototype.getAvg = function() {
 
 const bsm = new BloodSugarMgr();
 
+
+// TODO: Work with the createTR function to get more functionality
 function createTR() {
   // const template = document.querySelector("#bsdata");
   const td = document.querySelectorAll("td");
