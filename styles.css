@@ -28,3 +28,23 @@ tr:nth-of-type(even) {
 .colorText {
   color: black;
 }
+
+input{
+  width: 100px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input:focus{
+  width: 200px;
+  border-color: aquamarine;
+}
+form{
+
+width: 100%
+}
+
+button{
+  position: relative;
+  margin:  auto;
+}
