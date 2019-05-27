@@ -67,6 +67,7 @@ document.querySelector("form").addEventListener("submit", ev => {
 document.querySelector("button").addEventListener("click", () => {
   const averageString = `The average blood sugar of all applicants is ${bsm.getAvg()} mg/dl.`;
   bsRender(averageString);
+  // TODO: Work with this section to change when it crosses over a threshold and not just at the point when it is first loaded.
   if (bsm.getAvg() >= 70 && bsm.getAvg() <= 180) {
     para.classList.replace("colorText", "greenText");
   } else if (bsm.getAvg() == 0) {
