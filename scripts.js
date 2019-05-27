@@ -28,30 +28,22 @@ const bsm = new BloodSugarMgr();
 
 
 // TODO: Work with the createTR function to get more functionality
-function createTR() {
-  // const template = document.querySelector("#bsdata");
-  const td = document.querySelectorAll("td");
-  for (let i = 0; i < bsm.readings.length; i++)
-    if (i === 0) {
-      td[i].textContent = document.querySelector("#blood-sugar-level").value;
-      td[i + 1].textContent = document.querySelector("#comments").value;
-    } else if (i === 2) {
-      td[i].textContent = document.querySelector("#blood-sugar-level").value;
-      td[i + 1].textContent = document.querySelector("#comments").value;
-    } else if (i === 4) {
-      td[i].textContent = document.querySelector("#blood-sugar-level").value;
-      td[i + 1].textContent = document.querySelector("#comments").value;
-    } else if (i === 6) {
-      td[i].textContent = document.querySelector("#blood-sugar-level").value;
-      td[i + 1].textContent = document.querySelector("#comments").value;
-    } else if (i === 8) {
-      td[i].textContent = document.querySelector("#blood-sugar-level").value;
-      td[i + 1].textContent = document.querySelector("#comments").value;
-    } else if (i === 10) {
-      td[i].textContent = document.querySelector("#blood-sugar-level").value;
-      td[i + 1].textContent = document.querySelector("#comments").value;
-    }
-}
+function createTR()
+{
+  const bsInput = document.querySelector("#blood-sugar-level").value;
+  const comments = document.querySelector("#comments").value;
+  // selects the table element
+  const table = document.getElementsByTagName('table')[0];
+  // creates new table row
+  const newRow = table.insertRow(1);
+
+  const cellOne = newRow.insertCell(0);
+  const cellTwo = newRow.insertCell(1);
+
+
+  cellOne.innerHTML = bsInput;
+  cellTwo.innerHTML = comments;
+};
 
 document.querySelector("form").addEventListener("submit", ev => {
   // capture info entered into form
