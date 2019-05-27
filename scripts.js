@@ -4,6 +4,8 @@ function BloodSugarMgr() {
   this.readings = [];
 }
 
+const bsm = new BloodSugarMgr();
+
 function bsRender(str) {
   para.textContent = str;
 }
@@ -24,7 +26,7 @@ BloodSugarMgr.prototype.getAvg = function() {
   return total / this.readings.length;
 };
 
-const bsm = new BloodSugarMgr();
+
 
 
 // TODO: Work with the createTR function to get more functionality
@@ -36,11 +38,11 @@ function createTR()
   const table = document.getElementsByTagName('table')[0];
   // creates new table row
   const newRow = table.insertRow(1);
-
+  // inserts cells into row
   const cellOne = newRow.insertCell(0);
   const cellTwo = newRow.insertCell(1);
 
-
+  // set cells to user entered data
   cellOne.innerHTML = bsInput;
   cellTwo.innerHTML = comments;
 };
