@@ -26,16 +26,12 @@ BloodSugarMgr.prototype.getAvg = function() {
   return total / this.readings.length;
 };
 
-
-
-
 // TODO: Work with the createTR function to get more functionality
-function createTR()
-{
+function createTR() {
   const bsInput = document.querySelector("#blood-sugar-level").value;
   const comments = document.querySelector("#comments").value;
   // selects the table element
-  const table = document.getElementsByTagName('table')[0];
+  const table = document.getElementsByTagName("table")[0];
   // creates new table row
   const newRow = table.insertRow(1);
   // inserts cells into row
@@ -45,7 +41,7 @@ function createTR()
   // set cells to user entered data
   cellOne.innerHTML = bsInput;
   cellTwo.innerHTML = comments;
-};
+}
 
 document.querySelector("form").addEventListener("submit", ev => {
   // capture info entered into form
@@ -70,3 +66,11 @@ document.querySelector("button").addEventListener("click", () => {
     para.classList.replace("colorText", "redText");
   }
 });
+
+/*
+1. demonstrate an understanding of vue/react components
+2. writing js within framework
+3. some kind of feature with login/registration
+4. save bs amounts over a period of time
+5. view record of bs
+*/
